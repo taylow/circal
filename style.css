@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #240229;
+}
+
+.circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffe23b, #ff00e0);
+    /* animation: animate 5s linear infinite; */
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.circle span {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffe23b, #ff00e0);
+    animation: animate 5s linear infinite;
+}
+
+.circle span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.circle span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.circle span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.circle span:nth-child(4) {
+    filter: blur(50px);
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #240229;
+    border-radius: 50%;
+}
+
+.circle .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Fira Code', monospace;
+
+}
+
+/* Additional styling for the content */
+.circle .content h1 {
+    font-size: 24px;
+}
+
+.circle .content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ea00ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.join-button:hover {
+    background-color: #0056b3;
+}
