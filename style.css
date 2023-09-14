@@ -12,8 +12,8 @@ body {
 
 .circle {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: linear-gradient(#14ffe9, #ffe23b, #ff00e0);
     /* animation: animate 5s linear infinite; */
@@ -32,7 +32,7 @@ body {
     height: 95%;
     border-radius: 50%;
     background: linear-gradient(#14ffe9, #ffe23b, #ff00e0);
-    animation: animate 5s linear infinite;
+    animation: animate 5s ease-in-out infinite;
 }
 
 .circle span:nth-child(1) {
@@ -58,61 +58,49 @@ body {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    background: #240229;
+    /* background: #240229; */
+    background: #eee;
     border-radius: 50%;
+    filter: blur(20px);
 }
 
-.circle .content {
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 80%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: #000;
     z-index: 1;
     font-family: 'Fira Code', monospace;
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, );
 }
 
-.circle .content h1 {
+.circle::after:focus {
+    background-color: #FF5733;
+}
+
+.content h1 {
     font-size: 24px;
 }
 
-.circle .content p {
+.content p {
     font-size: 16px;
     margin-top: 10px;
 }
 
-.join-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ea00ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.join-button:hover {
-    background-color: #0056b3;
-}
-
-.join-container {
-    display: inline;
-    width: 30%;
-    padding-right: 20px;
-}
-
 .join {
     display: inline;
+    text-decoration: none;
+    margin-right: 10%;
     width: 8px;
     height: 24px;
-    color: white;
+    color: #000;
 }
 
 .cursor {
+    color: #000;
     display: inline-block;
     width: 8px;
     height: 24px;
